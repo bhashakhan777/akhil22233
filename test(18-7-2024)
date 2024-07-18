@@ -1,0 +1,37 @@
+1)class Main {
+  public static void divideByZero() {
+
+    throw new ArithmeticException("Trying to divide by 0");
+  }
+
+  public static void main(String[] args) {
+    divideByZero();
+  }
+}
+
+2)class Main {
+  public static void main(String[] args) {
+
+    try {
+
+      int divideByZero = 5 / 0;
+      System.out.println("Rest of code in try block");
+    }
+    
+    catch (ArithmeticException e) {
+      System.out.println("ArithmeticException => " + e.getMessage());
+    }
+  }
+}
+
+
+3)public class NullPointerExceptionHandling {
+    public static void main(String[] args) {
+        try {
+            String s = null;
+            System.out.println(s.length());
+        } catch (NullPointerException e) {
+            System.out.println("Error: NullPointerException occurred!");
+        }
+    }
+}
